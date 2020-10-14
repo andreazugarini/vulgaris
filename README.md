@@ -18,11 +18,15 @@ Project to analyze Italian Diachronic Language Varieties
 *Disclaimer:* we retrieved and analyzed the data from Biblioteca Italiana solely for personal and academic non-commercial purposes.
 To replicate our analyzes and ease the diachronic language research,
 we provide the following script that retrieves and organizes the corpus in a convenient structure.
-By running the following script, you declare to respect the following copyright by Biblioteca Italiana.
 
 ```
 python vulgaris_project.py
 ```
+
+By running that script, you declare to respect the following copyright of Biblioteca Italiana:
+[Creative Common License](http://creativecommons.org/licenses/by-nc-nd/2.0/it/)
+[![Creative Commons](https://i.creativecommons.org/l/by-nc-nd/2.0/it/88x31.png)](http://creativecommons.org/licenses/by-nc-nd/2.0/it/)
+
 ## Perplexity-base Analysis
 First you should retrieve the data.
 
