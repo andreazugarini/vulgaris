@@ -31,7 +31,7 @@ By running that script, you declare to respect the following copyright of Biblio
 [Creative Common License](http://creativecommons.org/licenses/by-nc-nd/2.0/it/)
 [![Creative Commons](https://i.creativecommons.org/l/by-nc-nd/2.0/it/88x31.png)](http://creativecommons.org/licenses/by-nc-nd/2.0/it/)
 
-## Perplexity-base Analysis
+## Perplexity-based Analysis
 First you should retrieve the data.
 
 ```
