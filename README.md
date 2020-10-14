@@ -2,6 +2,8 @@
 Project to analyze Italian Diachronic Language Varieties
 
 ## Cite
+
+```
 @misc{zugarini2020vulgaris,
       title={Vulgaris: Analysis of a Corpus for Middle-Age Varieties of Italian Language},
       author={Andrea Zugarini and Matteo Tiezzi and Marco Maggini},
@@ -10,6 +12,7 @@ Project to analyze Italian Diachronic Language Varieties
       archivePrefix={arXiv},
       primaryClass={cs.CL}
 }
+```
 
 ## Download
 Disclaimer: we retrieved and analyzed the data from Biblioteca Italiana solely for personal and academic non-commercial purposes.
