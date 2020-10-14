@@ -1,5 +1,9 @@
 # Vulgaris
-Project to analyze Italian Diachronic Language Varieties
+Project to analyze Italian Diachronic Language Varieties.
+
+Have a look at the project page - [Vulgaris for more details](https://sailab.diism.unisi.it/vulgaris/).
+
+[Technical report here](https://arxiv.org/pdf/2010.05993.pdf) - accepted at [VarDial2020](https://sites.google.com/view/vardial2020/home) Workshop, co-located with [COLING 2020](https://coling2020.org/).
 
 ## Cite
 
