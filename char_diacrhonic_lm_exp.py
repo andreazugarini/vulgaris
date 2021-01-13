@@ -78,6 +78,9 @@ if __name__ == '__main__':
     }
 
     # Create Common Vocabularies, they are the same on all the experiments, otherwise PPL becomes meaningless
+    if not os.path.exists(os.path.join(os.getcwd(), "savings")):
+        os.mkdir(os.path.join(os.getcwd(), "savings"))
+
     vocabs_path = os.path.join(os.getcwd(), "savings", "char_vocabs")
     if not os.path.exists(vocabs_path):
         os.mkdir(vocabs_path)
