@@ -8,13 +8,12 @@ Have a look at the project page - [Vulgaris for more details](https://sailab.dii
 ## Cite
 
 ```
-@misc{zugarini2020vulgaris,
-      title={Vulgaris: Analysis of a Corpus for Middle-Age Varieties of Italian Language},
-      author={Andrea Zugarini and Matteo Tiezzi and Marco Maggini},
-      year={2020},
-      eprint={2010.05993},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@inproceedings{zugarini2020vulgaris,
+  title={Vulgaris: Analysis of a Corpus for Middle-Age Varieties of Italian Language},
+  author={Zugarini, Andrea and Tiezzi, Matteo and Maggini, Marco},
+  booktitle={Proceedings of the 7th Workshop on NLP for Similar Languages, Varieties and Dialects},
+  pages={150--159},
+  year={2020}
 }
 ```
 
