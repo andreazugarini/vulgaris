@@ -18,9 +18,20 @@ Have a look at the project page - [Vulgaris for more details](https://sailab.dii
 ```
 
 ## Download Script
+
+
+
 *Disclaimer:* we retrieved and analyzed the data from Biblioteca Italiana solely for personal and academic non-commercial purposes.
 To replicate our analyzes and ease the diachronic language research,
 we provide the following script that retrieves and organizes the corpus in a convenient structure.
+
+
+To install all the required dependencies:
+
+```
+pip install -r download_requirements.txt
+```
+Then, run the script:
 
 ```
 python vulgaris_project.py
