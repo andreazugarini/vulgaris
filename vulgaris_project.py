@@ -52,7 +52,7 @@ class Dataframe_Wrap:
         self.df = pd.DataFrame(columns=columns)  # class dataframe
 
     def appending(self, data):
-        self.df = self.df.append(data, ignore_index=True)
+        self.df = self.df._append(data, ignore_index=True)
 
     def to_csv(self, name, sep='\t', encoding='utf-8'):
         self.df.to_csv(name, sep, encoding)
@@ -362,7 +362,7 @@ class Collection_200:
 
         self.df_poem = df_poem
         self.family = "'200"
-        getter = requests.get("http://admin.bibliotecaitaliana.netseven.it/wp-json/muruca-core/v1/xml/bibit000709")
+        getter = requests.get("http://backend.bibliotecaitaliana.it/wp-json/muruca-core/v1/xml/bibit000709")
         # extract xml tree from page
         self.tree = etree.fromstring(getter.content)
         # get the author  and title
@@ -462,70 +462,70 @@ df_poem = Dataframe_Wrap(columns=cols_2)
 
 
 links_dolce = [
-    "http://admin.bibliotecaitaliana.netseven.it/wp-json/muruca-core/v1/xml/bibit001542",  # GUIDO GUINIZZELLI
-    "http://admin.bibliotecaitaliana.netseven.it/wp-json/muruca-core/v1/xml/bibit001585",  # GUIDO CAVALCANTI
-    "http://admin.bibliotecaitaliana.netseven.it/wp-json/muruca-core/v1/xml/bibit001110",  # CINO DA PISTOIA
+    "http://backend.bibliotecaitaliana.it/wp-json/muruca-core/v1/xml/bibit001542",  # GUIDO GUINIZZELLI
+    "http://backend.bibliotecaitaliana.it/wp-json/muruca-core/v1/xml/bibit001585",  # GUIDO CAVALCANTI
+    "http://backend.bibliotecaitaliana.it/wp-json/muruca-core/v1/xml/bibit001110",  # CINO DA PISTOIA
     ##################
 ]
 
 links_tasso = [
-    "http://admin.bibliotecaitaliana.netseven.it/wp-json/muruca-core/v1/xml/bibit000126"
+    "http://backend.bibliotecaitaliana.it/wp-json/muruca-core/v1/xml/bibit000126"
 
 ]
 
-et = Page(url="http://admin.bibliotecaitaliana.netseven.it/wp-json/muruca-core/v1/xml/bibit000256", title=None,
+et = Page(url="http://backend.bibliotecaitaliana.it/wp-json/muruca-core/v1/xml/bibit000256", title=None,
           body='//text/body/div1')
-var = Page("http://admin.bibliotecaitaliana.netseven.it/wp-json/muruca-core/v1/xml/bibit000540",
+var = Page("http://backend.bibliotecaitaliana.it/wp-json/muruca-core/v1/xml/bibit000540",
            '(//text/body/div1/head)', '//text/body/div1', )
-rime_amore = Page("http://admin.bibliotecaitaliana.netseven.it/wp-json/muruca-core/v1/xml/bibit000682",
+rime_amore = Page("http://backend.bibliotecaitaliana.it/wp-json/muruca-core/v1/xml/bibit000682",
                   '(//text/body/div1/head)', '//text/body/div1', )
-lacrime = Page("http://admin.bibliotecaitaliana.netseven.it/wp-json/muruca-core/v1/xml/bibit000528",
+lacrime = Page("http://backend.bibliotecaitaliana.it/wp-json/muruca-core/v1/xml/bibit000528",
                '(//text/body/div1/head)', '//text/body/div1', )
-lacr_vergine = Page("http://admin.bibliotecaitaliana.netseven.it/wp-json/muruca-core/v1/xml/bibit001522", "GONZAGA",
+lacr_vergine = Page("http://backend.bibliotecaitaliana.it/wp-json/muruca-core/v1/xml/bibit001522", "GONZAGA",
                     '//text/body/div1')
-gieru = Page("http://admin.bibliotecaitaliana.netseven.it/wp-json/muruca-core/v1/xml/bibit000169",
+gieru = Page("http://backend.bibliotecaitaliana.it/wp-json/muruca-core/v1/xml/bibit000169",
              '(//text/body/div1/head[1])', '//text/body/div1', )
-gieru_conq = Page("http://admin.bibliotecaitaliana.netseven.it/wp-json/muruca-core/v1/xml/bibit000260",
+gieru_conq = Page("http://backend.bibliotecaitaliana.it/wp-json/muruca-core/v1/xml/bibit000260",
                   '(//text/body/div1/head[1])', '//text/body/div1', )
-gonzaga = Page("http://admin.bibliotecaitaliana.netseven.it/wp-json/muruca-core/v1/xml/bibit000126", "GONZAGA",
+gonzaga = Page("http://backend.bibliotecaitaliana.it/wp-json/muruca-core/v1/xml/bibit000126", "GONZAGA",
                '//text/body/div1', )
-prologhi = Page("http://admin.bibliotecaitaliana.netseven.it/wp-json/muruca-core/v1/xml/bibit000051",
+prologhi = Page("http://backend.bibliotecaitaliana.it/wp-json/muruca-core/v1/xml/bibit000051",
                 '(//text/body/div1/head)', '//text/body/div1', )
 
-rime_lu = Page("http://admin.bibliotecaitaliana.netseven.it/wp-json/muruca-core/v1/xml/bibit001217", "LUCRE",
+rime_lu = Page("http://backend.bibliotecaitaliana.it/wp-json/muruca-core/v1/xml/bibit001217", "LUCRE",
                '//text/body/div1', )
-sanbe = Page("http://admin.bibliotecaitaliana.netseven.it/wp-json/muruca-core/v1/xml/bibit001226", "GONZAGA",
+sanbe = Page("http://backend.bibliotecaitaliana.it/wp-json/muruca-core/v1/xml/bibit001226", "GONZAGA",
              '//text/body/div1', )
-monte_oli = Page("http://admin.bibliotecaitaliana.netseven.it/wp-json/muruca-core/v1/xml/bibit000829",
+monte_oli = Page("http://backend.bibliotecaitaliana.it/wp-json/muruca-core/v1/xml/bibit000829",
                  '(//text/body/div1/head)', '//text/body/div1', )
-rinaldo = Page("http://admin.bibliotecaitaliana.netseven.it/wp-json/muruca-core/v1/xml/bibit000970",
+rinaldo = Page("http://backend.bibliotecaitaliana.it/wp-json/muruca-core/v1/xml/bibit000970",
                '(//text/body/div1/head)', '//text/body/div1', )
-floridante = Page("http://admin.bibliotecaitaliana.netseven.it/wp-json/muruca-core/v1/xml/bibit001101",
+floridante = Page("http://backend.bibliotecaitaliana.it/wp-json/muruca-core/v1/xml/bibit001101",
                   '(//text/body/div1/head)', '//text/body/div1', )
 
-geru_lib = Page("http://admin.bibliotecaitaliana.netseven.it/wp-json/muruca-core/v1/xml/bibit001501",
+geru_lib = Page("http://backend.bibliotecaitaliana.it/wp-json/muruca-core/v1/xml/bibit001501",
                 '(//text/body/div1/head)', '//text/body/div1', )
-mondo_creato = Page("http://admin.bibliotecaitaliana.netseven.it/wp-json/muruca-core/v1/xml/bibit001455",
+mondo_creato = Page("http://backend.bibliotecaitaliana.it/wp-json/muruca-core/v1/xml/bibit001455",
                     '(//text/body/div1/head)', '//text/body/div1', )
-pri_fer = Page("http://admin.bibliotecaitaliana.netseven.it/wp-json/muruca-core/v1/xml/bibit001315",
+pri_fer = Page("http://backend.bibliotecaitaliana.it/wp-json/muruca-core/v1/xml/bibit001315",
                '(//text/body/div1/head)[position()>1]',
                '//text/body/div1[position()>1]', )  # prima poesia vuota (prosa)
 
-chigiano = Page("http://admin.bibliotecaitaliana.netseven.it/wp-json/muruca-core/v1/xml/bibit000682",
+chigiano = Page("http://backend.bibliotecaitaliana.it/wp-json/muruca-core/v1/xml/bibit000682",
                 '(//text/body/div1/head)', '//text/body/div1', )  # no strofa precedente
 
 
-rime_occasione = Page("http://admin.bibliotecaitaliana.netseven.it/wp-json/muruca-core/v1/xml/bibit000099",
+rime_occasione = Page("http://backend.bibliotecaitaliana.it/wp-json/muruca-core/v1/xml/bibit000099",
                       '(//text/body/div1[2]/div2/div3[not(.//div4)]/head)',
                       '//text/body/div1[2]/div2/div3[not(.//div4)]/lg', )
-rime_occasione_div4 = Page("http://admin.bibliotecaitaliana.netseven.it/wp-json/muruca-core/v1/xml/bibit000099",
+rime_occasione_div4 = Page("http://backend.bibliotecaitaliana.it/wp-json/muruca-core/v1/xml/bibit000099",
                            '(//text/body/div1[2]/div2/div3/div4[lg[not(contains(@type, "non-definito") or contains(@type, "madrigale") or contains(@type, "ottava"))]]/head)',
                            '//text/body/div1[2]/div2/div3/div4/lg[not(contains(@type, "non-definito") or contains(@type, "madrigale") or contains(@type, "ottava"))]', )  # alcuni vuoti
-estra = Page("http://admin.bibliotecaitaliana.netseven.it/wp-json/muruca-core/v1/xml/bibit001468",
+estra = Page("http://backend.bibliotecaitaliana.it/wp-json/muruca-core/v1/xml/bibit001468",
              '(//text/body/div1/head)', '//text/body/div1', )  # alcune con puntini
-pentito = Page("http://admin.bibliotecaitaliana.netseven.it/wp-json/muruca-core/v1/xml/bibit001390", "TAX",
+pentito = Page("http://backend.bibliotecaitaliana.it/wp-json/muruca-core/v1/xml/bibit001390", "TAX",
                '//text/body/div1[position() != 13 and  position() != 14]/lg', )  # alcune vuote (un lg in meno)
-pentito2 = Page("http://admin.bibliotecaitaliana.netseven.it/wp-json/muruca-core/v1/xml/bibit001390", "TAX2",
+pentito2 = Page("http://backend.bibliotecaitaliana.it/wp-json/muruca-core/v1/xml/bibit001390", "TAX2",
                 '//text/body/div1[position() = 13 or  position() = 14]', )  # alcune vuote (un lg in meno)
 
 list_tasso = [et, var, rime_amore, lacrime, lacr_vergine, gieru, gieru_conq, gonzaga, prologhi, rime_lu, sanbe,
